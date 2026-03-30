@@ -68,12 +68,12 @@ st.markdown("""
         background: linear-gradient(145deg, #f0f0f0, #d0d0d0) !important;
     }
 </style>
-""", unsafe_allow_stdio=True)
+""", unsafe_allow_html=True)
 
 # --- Título e Logo ---
 col1, col2 = st.columns([1, 6])
 with col1:
-    st.markdown('<div style="font-size: 4rem; text-align: center;">🎓</div>', unsafe_allow_stdio=True)
+    st.markdown('<div style="font-size: 4rem; text-align: center;">🎓</div>', unsafe_allow_html=True)
 with col2:
     st.title("MI Grade Calculator v1.0")
 
@@ -123,7 +123,7 @@ with col_results:
         # Display LCD principal da média atual
         st.markdown("**Current MI Parcial**")
         media_parcial = soma_mi / unidades
-        st.markdown(f'<div class="stDisplay">{media_parcial:.2f}</div>', unsafe_allow_stdio=True)
+        st.markdown(f'<div class="stDisplay">{media_parcial:.2f}</div>', unsafe_allow_html=True)
 
         if modo == "Parcial (Até 2)":
             st.markdown("---")
@@ -141,7 +141,7 @@ with col_results:
                     st.write(f"Next Unit Min. Avg: **{(pontos_passar/unidades_rest):.2f}**")
                 with col_gauge:
                     # Simulação tátil do medidor
-                    st.markdown(f'<div style="width: 80px; height: 80px; border-radius: 50%; border: 5px solid #555; background: #9ab39a; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; box-shadow: inset 3px 3px 5px rgba(0,0,0,0.5);">{(pontos_passar/unidades_rest):.1f}</div>', unsafe_allow_stdio=True)
+                    st.markdown(f'<div style="width: 80px; height: 80px; border-radius: 50%; border: 5px solid #555; background: #9ab39a; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; box-shadow: inset 3px 3px 5px rgba(0,0,0,0.5);">{(pontos_passar/unidades_rest):.1f}</div>', unsafe_allow_html=True)
 
             st.markdown("---")
             st.markdown("**Previsões (Média 3.0)**")
